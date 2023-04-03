@@ -12,7 +12,13 @@ public class GoogleSearchTest1 {
 
 	static WebDriver driver;
 
+	@BeforeTest
+	public void setUpTest() {
 
+		WebDriverManager.firefoxdriver().setup();
+		driver = new FirefoxDriver();
+
+	}
 	
 	@	Test
 	public static void googleSearchTest() throws Throwable {
